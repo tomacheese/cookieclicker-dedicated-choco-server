@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cookie Clicker Controller</title>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <h1>Cookie Clicker Controller</h1>
+        <p>Cookie Clicker is <span id="isRunning">LOADING..</span>.<br>
+            <span id="datetime"></span>
+        </p>
+        <ul id="metrics"></ul>
+        <button onclick="start()">Start</button> <button onclick="stop()">Stop</button> <button onclick="pcRestart()">PC
+            Restart</button>
+        <hr />
+        <img id="screenshot" src="screenshot.png" />
+        <script src="./script.js"></script>
+    </body>
+</html>

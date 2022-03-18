@@ -1,0 +1,3 @@
+*.bat       text eol=crlf encoding=cp932
+*.vbs       text eol=crlf encoding=cp932
+*.sh        text eol=lf
