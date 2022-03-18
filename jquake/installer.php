@@ -27,7 +27,7 @@ if (!file_exists(__DIR__ . "/app/")) {
 $zip = new ZipArchive;
 $res = $zip->open(__DIR__ . "/" . $filename);
 if ($res === true) {
-    $zip->extractTo("app/", null, true);
+    $zip->extractTo("app/");
     $zip->close();
 } else {
     echo "failed to open zip file\n";
