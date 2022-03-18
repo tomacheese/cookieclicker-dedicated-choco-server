@@ -5,5 +5,5 @@ fil = startupPath + "\JQuake.lnk"
 
 Set shortCut = shell.CreateShortcut(fil)
 curDir = shell.CurrentDirectory
-shortCut.TargetPath = curDir + "\JQuake.exe"
+shortCut.TargetPath = curDir + "\app\JQuake.exe"
 shortCut.Save
