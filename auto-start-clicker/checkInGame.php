@@ -48,6 +48,8 @@ while (true) {
     sleep(1);
 }
 
+sleep(3);
+
 system(__DIR__ . "/minimalize-CookieClicker.vbs");
 
 echo date("Y-m-d H:i:s ") . "started\n";
