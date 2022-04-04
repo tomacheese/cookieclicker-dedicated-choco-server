@@ -40,12 +40,19 @@ if ($ret !== 0) {
     exit;
 }
 
+$count = 0;
 while (true) {
     if (isRunningCookieClicker()) {
         break; // Cookie Clicker is running
     }
     echo "Cookie Clicker is not running...\n";
     sleep(1);
+    $count++;
+    if ($count >= 10) {
+        echo date("Y-m-d H:i:s ") . "start failed\n";
+        exec("start \"\" \"taskkill /IM steam.exe /F /T\"", $output, $ret);
+        exit;
+    }
 }
 
 sleep(3);
