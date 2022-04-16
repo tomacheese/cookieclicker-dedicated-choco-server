@@ -50,7 +50,7 @@ while (true) {
     $count++;
     if ($count >= 10) {
         echo date("Y-m-d H:i:s ") . "start failed\n";
-        system("taskkill /IM steam.exe /F /T", $output, $ret);
+        system("taskkill /IM steam.exe /F /T", $output);
         exit;
     }
 }
