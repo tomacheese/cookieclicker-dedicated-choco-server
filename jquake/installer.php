@@ -28,7 +28,19 @@ if (trim($output[count($output)-1]) != "0") {
 }
 
 echo "Downloading JQuake $latest_version...\n";
-$url = $data["history"][$latest_version]["builds"]["windows"][0]["download"];
+$bit = (PHP_INT_SIZE == 4) ? "32bit" : "64bit";
+$bit64Index = null;
+foreach ($data["history"][$latest_version]["builds"]["windows"] as $i => $build) {
+    if ($build["arch"] == $bit) {
+        $bit64Index = $i;
+        break;
+    }
+}
+if ($bit64Index === null) {
+    echo "Could not find a $bit build for JQuake $latest_version.\n";
+    exit;
+}
+$url = $data["history"][$latest_version]["builds"]["windows"][$bit64Index]["download"];
 $filename = basename($url);
 downloadFile($url, __DIR__ . "/" . $filename);
 // file_put_contents(__DIR__ . "/" . $filename, file_get_contents($url));
