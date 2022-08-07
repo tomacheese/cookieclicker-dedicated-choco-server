@@ -1,5 +1,17 @@
 <?php
+
 chdir(__DIR__);
+
+function downloadFile($url, $path)
+{
+    $ch = curl_init($url);
+    $fp = fopen($path, 'wb');
+    curl_setopt($ch, CURLOPT_FILE, $fp);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_exec($ch);
+    curl_close($ch);
+    fclose($fp);
+}
 
 $json = file_get_contents("https://jquake.net/data/versions.json");
 $data = json_decode($json, true);
@@ -18,13 +30,14 @@ if (trim($output[count($output)-1]) != "0") {
 echo "Downloading JQuake $latest_version...\n";
 $url = $data["history"][$latest_version]["builds"]["windows"][0]["download"];
 $filename = basename($url);
-file_put_contents(__DIR__ . "/" . $filename, file_get_contents($url));
+downloadFile($url, __DIR__ . "/" . $filename);
+// file_put_contents(__DIR__ . "/" . $filename, file_get_contents($url));
 
 if (!file_exists(__DIR__ . "/app/")) {
     mkdir(__DIR__ . "/app/");
 }
 
-$zip = new ZipArchive;
+$zip = new ZipArchive();
 $res = $zip->open(__DIR__ . "/" . $filename);
 if ($res === true) {
     $zip->extractTo("app/");
