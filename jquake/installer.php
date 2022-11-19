@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(-1);
+ini_set("display_errors", 1);
 chdir(__DIR__);
 
 function downloadFile($url, $path)
@@ -7,7 +8,8 @@ function downloadFile($url, $path)
     $ch = curl_init($url);
     $fp = fopen($path, 'wb');
     curl_setopt($ch, CURLOPT_FILE, $fp);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_exec($ch);
     curl_close($ch);
     fclose($fp);
