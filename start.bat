@@ -8,3 +8,7 @@ start "google-assistant-listening" /D "google-assistant-listening" /MIN "start.b
 start "auto-start-clicker" /D "auto-start-clicker" /MIN "checkInGame.bat"
 start "JQuake-Installer" /D "jquake" /MIN "installer.bat"
 start "VbWinPos" /D "VbWinPos" /MIN "VbWinPos.exe"
+
+timeout /NOBREAK 10
+
+DisplaySwitch.exe /external
