@@ -16,7 +16,7 @@ if (isRunningCookieClicker()) {
     exit;
 }
 
-$xml = file_get_contents("https://steamcommunity.com/id/$steam_username?xml=1");
+$xml = file_get_contents("https://steamcommunity.com/id/$steam_username?xml=1&" . date("YmdHis"));
 preg_match("/<onlineState>(.+)<\/onlineState>/", $xml, $matches);
 if ($matches[1] == "in-game") {
     echo date("Y-m-d H:i:s ") . "In game\n";
