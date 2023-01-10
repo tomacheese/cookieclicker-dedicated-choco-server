@@ -57,7 +57,7 @@ while (true) {
 
 sleep(3);
 
-system(__DIR__ . "/minimalize-CookieClicker.vbs");
+// system(__DIR__ . "/minimalize-CookieClicker.vbs");
 
 echo date("Y-m-d H:i:s ") . "started\n";
 unlink(__DIR__ . "/nextStartGame");
