@@ -1,4 +1,5 @@
 @echo off
+git reset --hard
 git pull
 
 start "web-controller-server" /D "web-controller-server" /MIN "start.bat"

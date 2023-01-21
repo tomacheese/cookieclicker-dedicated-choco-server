@@ -3,9 +3,11 @@ FormatVersion_8
 "JQuake","SunAwtFrame","JQuake","",-7,0,653,376,1,0,0,0,0,"",1,0,0
 "TaskManager","TaskManagerWindow","タスク マネージャー","",638,0,1229,371,1,0,0,0,0,"",1,0,0
 "Open Hardware Monitor","WindowsForms10.Window.8.app.0.141b42a_r6_ad1","Open Hardware Monitor","",1422,1,1996,408,1,0,0,0,0,"",1,0,0
-"switchbot-logger","Chrome_WidgetWin_1","switchbot-logger - プロファイル 1 - Microsoft? Edge","",1477,2,1993,206,1,0,4,0,0,"",1,0,0
+"switchbot-logger","Chrome_WidgetWin_1","switchbot-logger","",1477,2,1993,206,1,0,2,0,0,"",1,0,0
 "Google Assistant Listening","Chrome_WidgetWin_1","Google Assistant Listening - Google Chrome","",861,375,1612,638,1,0,0,0,0,"",1,0,0
 "Google Assistant Unofficial Client","Chrome_WidgetWin_1","Google Assistant Unofficial Client","",0,759,790,1154,1,0,0,0,0,"",1,0,0
 "Alexa","ApplicationFrameWindow","Alexa","",869,633,1385,1163,1,0,0,0,0,"",1,0,0
 "Open Hardware Monitor Graph","WindowsForms10.Window.8.app.0.141b42a_r6_ad1","","",1510,786,2056,1158,1,0,0,0,0,"",1,0,0
 "Cookie Clicker","Chrome_WidgetWin_1","Cookie Clicker","",54,-8,2056,1160,1,0,3,0,1,"",1,0,0
+"Google Assistant Token","","[CHOCO] Google Assistant Token | Power Automate","",0,370,600,770,1,0,0,0,0,"",1,0,0
+"AutoGoLive","","[CHOCO] AutoGoLive | Power Automate","",250,370,850,770,1,0,0,0,0,"",1,0,0
